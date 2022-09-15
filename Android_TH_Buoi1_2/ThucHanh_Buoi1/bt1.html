@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script>
+        const headerA = document.createElement('h3');
+        const headerContentA = document.createTextNode(
+            'a',
+        );
+        const headerB = document.createElement('h3');
+        const headerContentB = document.createTextNode(
+            'b',
+        );
+
+
+        var output = document.createElement('p');
+
+
+        const inputA = document.createElement('input');
+        inputA.setAttribute("id", "numA")
+
+
+        const inputB = document.createElement('input');
+        inputB.setAttribute("id", "numB")
+
+
+        const headersum = document.createElement('button');
+        const headerContentSum = document.createTextNode(
+            'sum',
+        );
+        headersum.onclick = function() {
+            output.value = null;
+            var a = parseInt(inputA.value);
+            var b = parseInt(inputB.value);
+            output = parseInt(a + b);
+
+            document.body.append(output)
+
+        }
+
+        headerA.appendChild(headerContentA);
+        headerB.appendChild(headerContentB);
+        headersum.appendChild(headerContentSum);
+
+        app.appendChild(headerA);
+        app.appendChild(inputA);
+        app.appendChild(headerB);
+        app.appendChild(inputB);
+        app.appendChild(headersum)
+    </script>
+</body>
+
+</html>
