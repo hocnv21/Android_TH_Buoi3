@@ -12,7 +12,7 @@ import List from "./components/PokeList";
 import { useState, useEffect } from "react";
 //Export default the stateless component
 function App() {
-  const [nameInput, setNameInput] = useState("aa");
+  const [nameInput, setNameInput] = useState("");
   const [arrData, setArrData] = useState([
     {
       id: Math.random(),
@@ -32,13 +32,13 @@ function App() {
         }}
       >
         <TextInput
-          style={{}}
+          style={{ flex: 1 }}
           placeholder="Nhap ten "
           onChangeText={(text) => setNameInput(text)}
           value={nameInput}
         ></TextInput>
         <Button
-          title={"Them " + arrData.length}
+          title="Them "
           onPress={() => {
             arrData.push({
               id: Math.random(),
